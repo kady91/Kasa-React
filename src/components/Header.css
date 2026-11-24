@@ -1,0 +1,60 @@
+/* En-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0;
+}
+
+/* Logo */
+.logo {
+  width: 210px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navigation */
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Les deux liens sont en gras */
+.header nav a {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 143%;
+  text-decoration: none;
+}
+
+/* Souligner uniquement la page active */
+.header nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .header {
+    margin: 20px 0;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .header nav {
+    gap: 15px;
+  }
+
+  .header nav a {
+    font-size: 12px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+}

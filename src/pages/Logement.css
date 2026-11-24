@@ -1,0 +1,132 @@
+
+/* Page détail du logement */
+.logement-detail {
+  width: 100%;
+}
+
+/* Informations du logement */
+.logement-infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.logement-titre h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.logement-titre p {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: #ff6060;
+  color: white;
+  font-size: 14px;
+}
+
+/* Informations de l'hôte */
+.hote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.hote-identite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hote-identite p {
+  max-width: 100px;
+  text-align: right;
+}
+
+.hote-identite img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Étoiles */
+.etoiles {
+  color: #ff6060;
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+/* Disposition des menus déroulants */
+.logement-accordeons {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .logement-infos {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .logement-titre h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .logement-titre p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .tags {
+    gap: 5px;
+  }
+
+  .tags span {
+    padding: 4px 15px;
+    font-size: 10px;
+  }
+
+  .hote {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hote-identite p {
+    font-size: 12px;
+  }
+
+  .hote-identite img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .etoiles {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .logement-accordeons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

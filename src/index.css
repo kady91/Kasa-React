@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* Styles généraux de l'application Kasa */
+
+/* Police et couleurs principales */
+:root {
+  font-family: Montserrat, Arial, sans-serif;
+  color: #ff6060;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gestion générale des dimensions */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  width: 100%;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Titres et paragraphes */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* Images adaptables */
+img {
+  max-width: 100%;
+}

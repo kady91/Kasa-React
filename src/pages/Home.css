@@ -1,0 +1,27 @@
+/* Conteneur gris des logements */
+.logements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .logements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logements {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+    margin-top: 0;
+    background-color: white;
+  }
+}

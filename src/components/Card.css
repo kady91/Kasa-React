@@ -1,0 +1,30 @@
+/* Carte de logement */
+.card-link {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ff6060 0%, #d94b4b 100%);
+}
+
+/* Titre du logement */
+.card h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .card {
+    aspect-ratio: 1.2 / 1;
+  }
+}
