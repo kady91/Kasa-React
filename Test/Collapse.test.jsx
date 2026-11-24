@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
-import Collapse from './Collapse'
+import Collapse from '../src/components/Collapse'
 import { describe, test, expect } from 'vitest'
 
 describe('Collapse', () => {

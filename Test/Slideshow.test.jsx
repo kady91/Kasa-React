@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
-import Slideshow from './Slideshow'
+import Slideshow from '../src/components/Slideshow'
 import { describe, test, expect } from 'vitest'
 
 describe('Slideshow', () => {
