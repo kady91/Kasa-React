@@ -9,9 +9,13 @@
 }
 
 /* Le contenu occupe toute la largeur disponible */
+
 main {
   width: 100%;
-  flex: 1;
+}
+
+.footer {
+  margin-top: 20px;
 }
 
 /* Adaptation mobile */

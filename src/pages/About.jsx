@@ -1,15 +1,15 @@
-
 import Collapse from '../components/Collapse'
 import Banner from '../components/Banner'
 import './About.css'
+import aboutImage from '../assets/about.svg'
 
 // Affiche la page À propos
 function About() {
   return (
     <main className="about-page">
+      {/* Bannière spécifique à la page About, sans texte */}
+      <Banner image={aboutImage} texte="" />
 
-      {/* Affiche le composant Banner sur la page About */}
-      <Banner />
 
       {/* Affiche les différents menus déroulants */}
       <div className="about-accordeons">

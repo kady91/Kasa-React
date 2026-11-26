@@ -1,5 +1,4 @@
 
-/* Pied de page */
 .footer {
   background-color: #000;
   color: #fff;
@@ -9,14 +8,16 @@
   justify-content: center;
   text-align: center;
   padding: 60px 20px 30px;
-  margin-top: 40px;
+  margin-top: 0;
 
-  /* Évite le débordement horizontal */
-  width: 100%;
+  /* Le footer occupe toute la largeur de l'écran */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
 }
 
-/* Logo du pied de page */
 .footer-logo {
   width: 122px;
   height: auto;
@@ -24,7 +25,6 @@
   margin-bottom: 15px;
 }
 
-/* Texte du pied de page */
 .footer p {
   max-width: 160px;
   margin: 0;
@@ -32,13 +32,8 @@
   line-height: 1.5;
 }
 
-/* Adaptation mobile */
 @media (max-width: 768px) {
   .footer {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top: 0;
     padding-top: 40px;
   }
 }
