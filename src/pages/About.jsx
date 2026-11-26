@@ -1,16 +1,17 @@
 
-import aboutImage from '../assets/about.svg'
 import Collapse from '../components/Collapse'
-import './About.css'
 import Banner from '../components/Banner'
+import './About.css'
 
+// Affiche la page À propos
 function About() {
   return (
     <main className="about-page">
-      <div className="about-banner">
-        <img src={aboutImage} alt="Paysage de montagne" />
-      </div>
 
+      {/* Affiche le composant Banner sur la page About */}
+      <Banner />
+
+      {/* Affiche les différents menus déroulants */}
       <div className="about-accordeons">
         <Collapse title="Fiabilité">
           <p>

@@ -1,4 +1,5 @@
 
+/* Pied de page */
 .footer {
   background-color: #000;
   color: #fff;
@@ -9,8 +10,13 @@
   text-align: center;
   padding: 60px 20px 30px;
   margin-top: 40px;
+
+  /* Évite le débordement horizontal */
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Logo du pied de page */
 .footer-logo {
   width: 122px;
   height: auto;
@@ -18,21 +24,16 @@
   margin-bottom: 15px;
 }
 
+/* Texte du pied de page */
 .footer p {
   max-width: 160px;
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-
 }
 
-.footer {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
-
+/* Adaptation mobile */
 @media (max-width: 768px) {
-
   .footer {
     width: calc(100% + 40px);
     margin-left: -20px;
@@ -41,5 +42,3 @@
     padding-top: 40px;
   }
 }
-
-  
