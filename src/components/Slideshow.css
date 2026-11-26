@@ -67,8 +67,7 @@
     right: 5px;
   }
 
-  .compteur {
-    bottom: 10px;
-    font-size: 12px;
+   .compteur {
+    display: none;
   }
 }

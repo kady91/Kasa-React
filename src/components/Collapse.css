@@ -1,27 +1,28 @@
 
+/* Conteneur principal du Collapse */
 .accordeon {
   flex: 1;
   min-width: 0;
 }
 
-.accordeon summary {
+/* Titre cliquable du Collapse */
+.accordeon-titre {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 12px 20px;
+  border: none;
   border-radius: 5px;
   background-color: #ff6060;
   color: white;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  list-style: none;
+  text-align: left;
 }
 
-.accordeon summary::-webkit-details-marker {
-  display: none;
-}
-
+/* Style de la flèche */
 .menu-chevron {
   display: inline-block;
   flex-shrink: 0;
@@ -31,38 +32,71 @@
   border-right: 3px solid white;
   border-radius: 2px;
   transform: rotate(-45deg);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
 }
 
-.accordeon[open] .menu-chevron {
+/* Tourne la flèche lorsque le Collapse est ouvert */
+.accordeon.ouvert .menu-chevron {
   transform: rotate(135deg);
 }
 
+/* Conteneur du contenu fermé */
 .accordeon-contenu {
-  padding: 20px;
+  display: grid;
+  grid-template-rows: 0fr;
   background-color: #f6f6f6;
   color: #000;
   line-height: 1.5;
+  transition: grid-template-rows 0.3s ease;
 }
 
-.accordeon-contenu ul {
+/* Déroule le contenu à l'ouverture */
+.accordeon.ouvert .accordeon-contenu {
+  grid-template-rows: 1fr;
+}
+
+/* Contenu intérieur masqué pendant l'animation */
+.accordeon-interieur {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: padding 0.3s ease;
+}
+
+/* Ajoute les espacements lorsque le Collapse est ouvert */
+.accordeon.ouvert .accordeon-interieur {
+  padding: 20px;
+}
+
+/* Style des listes */
+.accordeon-interieur ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.accordeon-contenu p {
+/* Supprime la marge inférieure des paragraphes */
+.accordeon-interieur p {
   margin-bottom: 0;
 }
 
+/* Adaptation mobile */
 @media (max-width: 768px) {
-  .accordeon summary {
+  .accordeon-titre {
     padding: 10px;
     font-size: 13px;
   }
 
-  .accordeon-contenu {
+  /* Réduit les espacements sur mobile */
+  .accordeon-interieur {
+    padding: 0 15px;
+  }
+
+  .accordeon.ouvert .accordeon-interieur {
     padding: 15px;
+  }
+
+  .accordeon-contenu {
     font-size: 12px;
   }
 }

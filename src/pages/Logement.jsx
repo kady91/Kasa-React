@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Slideshow from '../components/Slideshow'
 import Collapse from '../components/Collapse'
 import './Logement.css'
+import NotFound from './NotFound'
 
 function Logement() {
   const { id } = useParams()
@@ -35,7 +36,7 @@ function Logement() {
   const logement = resultat.logement
 
   if (chargement) return <p>Chargement...</p>
-  if (!logement) return <h1>Logement introuvable - 404</h1>
+  if (!logement) return <NotFound />
 
   return (
     <main className="logement-detail">

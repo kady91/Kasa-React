@@ -1,3 +1,4 @@
+
 /* Carte de logement */
 .card-link {
   display: block;
@@ -10,10 +11,17 @@
   aspect-ratio: 1 / 1;
   border-radius: 10px;
   overflow: hidden;
-  background: linear-gradient(180deg, #ff6060 0%, #d94b4b 100%);
 }
 
-/* Titre du logement */
+/* Image de couverture du logement */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recadre l'image sans la déformer */
+  display: block;
+}
+
+/* Titre du logement affiché sur l'image */
 .card h2 {
   position: absolute;
   bottom: 20px;
@@ -21,8 +29,10 @@
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
+  z-index: 1;
 }
 
+/* Adaptation des cartes sur mobile */
 @media (max-width: 768px) {
   .card {
     aspect-ratio: 1.2 / 1;

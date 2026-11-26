@@ -5,7 +5,10 @@
   min-height: 223px;
   margin-bottom: 40px;
   border-radius: 25px;
-  background-image: url('../assets/banniere.svg');
+  background-image: linear-gradient(
+  rgba(0, 0, 0, 0.6),
+  rgba(0, 0, 0, 0.6)
+), url('../assets/banniere.svg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -13,8 +16,10 @@
 }
 
 .banner h1 {
-  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
   font-weight: 700;
+  line-height: 1.43;
 }
 
 
@@ -27,9 +32,13 @@
   }
 
   .banner h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-weight: 700;
     line-height: 1.2;
+    width: 225px;
+    margin: 0;
+    padding: 0;
     text-align: left;
-    padding: 0 15px;
   }
 }
