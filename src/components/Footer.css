@@ -26,14 +26,32 @@
 }
 
 .footer p {
-  max-width: 160px;
+  max-width: none;
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
 }
-
 @media (max-width: 768px) {
   .footer {
-    padding-top: 40px;
+    width: 100vw;
+    min-height: 216px;
+    flex: 1;
+    padding: 30px 20px;
+    margin-left: calc(50% - 50vw);
+    transform: none;
+    left: auto;
+    box-sizing: border-box;
+    justify-content: flex-start;
   }
+
+  /* Garde le copyright sur deux lignes */
+  .footer p {
+    white-space: normal;
+    max-width: 160px;
+    }
+.footer-logo,
+.footer p {
+  transform: translateY(20px);
+}
+
 }
